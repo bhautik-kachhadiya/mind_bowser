@@ -1,10 +1,14 @@
 # mind_bowser
 Assignment_1_Manager_app(Django)
 1.run the server
+
 2.goto the signUp or login page.
+
 3.after login, list employees and add new employee 
 Button will be. Available on navigation bar.
+
 4. To see the list, click on employee list
+
 5. After displaying employee list
 U can search or update/delete the perticular employee.
 
@@ -19,3 +23,7 @@ And success page will display.
 U can logout.
 After logout, add employee and list employee options will
 Not be showing on navigation bar.
+
+8.YOU HAVE TO ADD YOUR EMAIL AND PASSWORD IN SETTINGS.PY
+FILE TO SEND THE EMAIL TO EMPLOYEE WHEN MANAGER ADD 
+NEW EMPLOYEE.
