@@ -1,0 +1,14 @@
+{%include 'base.html'%}
+{% load bootstrap3%}
+{% if user.is_authenticated %}
+<div class="container">
+    <h3>Update Employee</h3>
+    <form method="POST">
+        {%csrf_token%}
+        {% bootstrap_form form %}
+        <input type="submit">
+    </form>
+</div>
+{% else  %}
+<h2>Please Login or SignUp To Explore More.</h2>
+{%endif%}

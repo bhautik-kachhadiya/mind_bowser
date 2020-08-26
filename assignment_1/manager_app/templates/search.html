@@ -1,0 +1,43 @@
+{%include 'base.html'%}
+{% load bootstrap3%}
+{% if user.is_authenticated %}
+<div class="container">
+    {% if employees %}
+    <h3>Search results as following...</h3>
+        <table border="2" width = 1000px>
+            <th>ID</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Email</th>
+            <th>Mobile</th> 
+            <th>DOB</th>
+            <th>Address</th>
+            <th>City</th>
+            <th>Actions</th>
+        
+            {% for employee in employees %}
+        
+            <tr>
+                <td>{{employee.pk}}</td>
+                <td>{{employee.first_name}}</td>
+                <td>{{employee.last_name}}</td>
+                <td>{{employee.email}}</td>
+                <td>{{employee.mobile}}</td>
+                <td>{{employee.dob}}</td>
+                <td>{{employee.address}}</td>
+                <td>{{employee.city}}</td>
+                <td><button><a href="{% url 'manager_app:update_employee' pk=employee.pk%}">UPDATE</a></button>
+                    <button><a href="{% url 'manager_app:delete_employee' pk=employee.pk%}">DELETE</a></button></td>
+            </tr>
+        
+            {% endfor %}
+        </table>
+        {% else  %}
+            <h2>No results...</h2>
+    {% endif %}
+
+    <button><a href="{% url 'manager_app:employee_list'%}">Back To Full List.</a></button>
+    
+{% else  %}
+<h2>Please Login or SignUp To Explore More.</h2>
+{%endif%}

@@ -1,0 +1,10 @@
+{%include 'base.html'%}
+{% load bootstrap3%}
+{% if user.is_authenticated %}
+<div class="container">
+    <h2>Welcome, {{user.first_name}} {{user.last_name}}</h2>
+    <h3>Now U are Logged in..</h3>
+</div>
+{% else  %}
+<h2>Please Login or SignUp To Explore More.</h2>
+{%endif%}

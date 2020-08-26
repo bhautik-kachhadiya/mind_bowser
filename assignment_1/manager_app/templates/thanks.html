@@ -1,0 +1,11 @@
+{%include 'base.html'%}
+{% load bootstrap3%}
+{% if user.is_authenticated %}
+
+{% else %}
+<div class="container">
+    <h2>Thanks..</h2>
+    <h3>Come Back Soon...</h3>
+
+</div>
+{%endif%}
